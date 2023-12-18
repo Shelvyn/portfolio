@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ingrid Darling');
+@import url('https://fonts.googleapis.com/css?family=Imprint MT Shadow');
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.row {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ 
+.row::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-color: #ff9dcf;
+}
+
+.row .head{
+    position: relative;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #ff9dcf;
+     border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 0 40px 0 80px;
+}
+
+.head nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.head nav .logo {
+    color: #801f82;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.head nav .navbar a {
+    color : #242424;
+    margin-left: 15px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.head nav .navbar a:hover,
+.head nav .navbar a.active{
+    color :#801f82;
+}
+
+.head .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    
+}
+
+.head .content .div-text{
+    width: 40%;
+}
+
+.head .content .div-text h1{
+    margin-bottom: 25px;
+    font-size: 40px;
+    margin-top: 40px;
+    color: #fff;
+    font-family: 'Ingrid Darling';
+
+}
+
+.head .content .div-text h4{
+    color: #801f82;
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-family: 'Imprint MT Shadow';
+
+}
+
+.head .content .div-text p{
+    margin-bottom: 5 0px;
+    color: #4f4F4f;
+    font-size: 16px;
+}
+
+.head .content .div-img{
+    width: 40%;
+}
+
+.head .content .div-img img{
+    width: 110%;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+}
+
+@keyframes fade-img{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.head .logo,
+.head .content .div-text h1,
+.head .content .div-text h4{
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+.head .logo {
+    animation-delay: 0.2s;
+}
+.head .content .div-text h1 {
+    animation-delay: 0.5s;
+}
+.head .content .div-text h4 {
+    animation-delay: 0.9s;
+}
+ @keyframes slide-top {
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.head .content .div-text p{
+    position: relative;
+    left: 100px;
+    animation: slide-right .5s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+    margin-bottom: 70px;
+}
+
+@keyframes slide-right{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.head .content .div-text  a {
+    font-size: 40px;
+    padding: 70px 20px;
+    margin-top:  50px;
+    margin-bottom: 20px;
+    animation: slide-right .5s linear forwards;
+    opacity: 0;
+    animation-delay: 1.7s;
+}
+
+#nom_prenom {
+    background-color: #BBF3C0;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+  }
+  #photo {
+    width : 100px;
+    height: 100px;
+    float:right;
+    margin: 30px;
+  }
+  #coordonée{
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 600px 600px 600px;
+    margin-top: 30px;
+  }
+  th {
+    padding: 12px;
+    margin-top: 30px;
+    vertical-align: top;
+    background-color: #D3D3D3;
+  }
+  
+  td {
+    padding: 12px;
+    margin-top: 30px;
+    vertical-align: top;
+  }
+  table.qualités{
+    border-collapse:collapse;
+        }
+  table.qualités td {
+        padding: 10px;
+        border-bottom: 2px solid #7ED18E;
+        text-align: center;
+        }
+  table.qualités th {
+        padding: 20px;
+      text-align: center;
+    font-size: 30px;
+  font-style: oblique;
+  color: black;
+  border-bottom: 2px solid #7ED18E;
+  background-color: inherit;
+  }
+  .police_grasse {
+    font-style: oblique;
+    color: #00FF7F;
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .right {
+    background-color: #CCEEEE;
+    float: right;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+  /*#mon_cv{
+    display: none;
+}
+ */
+#ma_nav ol {
+    text-align: center;
+    margin-left : 30px;
+     display: inline;
+    color: black;
+    }
+    #ma_nav ul :hover
+    {
+      text-decoration: underline;
+    }
+
+section {
+    padding: 30px 30px 20px 20px;
+    display: block;
+}
+
+.navbar #nav_mon_site.active
+{
+    color: #801f82;
+}
+.navbar ol {
+    text-align: center;
+    margin-left: 30px;
+    cursor: pointer;
+    display: inline;
+    color: black;
+    }
+    .navbar ul :hover
+    {
+      text-decoration: none;
+    }
+/*
+body {
+    background: #0c1022;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20pxx 10%;   
+    background: #0c130a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+*/
